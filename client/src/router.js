@@ -12,16 +12,34 @@ export default new Router({
       //tasks or login
       //alias: ['/forms', '/processes'],
       path: '/',
-      alias: ['/processes'],
       name: 'home',
       component: Home
     },
     {
       // formList
       path: '/forms',
-      alias: ['/forms/:id'],
-      name: 'home',
+      name: 'forms',
       component: () => import('./views/FormList.vue')
+    },
+    {
+      // formList
+      path: '/processes',
+      name: 'processes',
+      component: () => import('./views/ProcessListView.vue')
+    },
+    {
+      // form edit
+      path: '/forms/:id',
+      alias: ['/forms/new'],
+      name: 'formsEdit',
+      component: () => import('./views/FormEditView.vue')
+    },
+    {
+      // form edit
+      path: '/processes/:id',
+      alias: ['/processes/new'],
+      name: 'processesEdit',
+      component: () => import('./views/ProcessEditView.vue')
     },
     {
       path: '/about',

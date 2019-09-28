@@ -10,19 +10,18 @@
         <v-content>
             <Header/>
             <v-divider></v-divider>
-            <FormTable/>
+            <h3>Процессы</h3>
         </v-content>
     </v-app>
 </template>
 
 <script>
+    import Logo from "../components/Logo";
     import Accordion from "../components/Accordion";
     import Header from "../components/Header";
-    import Logo from "../components/Logo";
-    import FormTable from "../components/FormTable";
     export default {
-        name: "FormList",
-        components: {FormTable, Logo, Header, Accordion}
+        name: "ProcessListView",
+        components: {Header, Accordion, Logo}
     }
 </script>
 
