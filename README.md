@@ -17,5 +17,10 @@ Where do you prefer placing config for Babel, PostCSS, ESLint, etc.?: In dedicat
 vue add vuetify
 Default
 
+1. add BPMN 2.0
+npm install --save bpmn-js
+npm install vue-bpmn
+
+
 1. run localhost
 vue-cli-service serve
