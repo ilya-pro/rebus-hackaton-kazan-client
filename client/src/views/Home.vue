@@ -10,7 +10,7 @@
     <v-content>
       <Header/>
       <v-divider></v-divider>
-      <div>Общая</div>
+      <TaskTable/>
     </v-content>
   </v-app>
 </template>
@@ -21,6 +21,7 @@
 import Logo from "../components/Logo";
 import Accordion from "../components/Accordion";
 import Header from "../components/Header";
+import TaskTable from "../components/TaskTable";
 
 export default {
   /*data: () => ({
@@ -32,6 +33,7 @@ export default {
     model: 'cForm'
   }),*/
   components: {
+    TaskTable,
     Header,
     Accordion,
     Logo
