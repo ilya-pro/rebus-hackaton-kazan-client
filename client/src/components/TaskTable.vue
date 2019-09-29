@@ -1,8 +1,7 @@
 <template>
     <div>
-
         <v-data-table
-                v-show="!isDataLoaded"
+                v-show="isDataLoaded"
                 :headers="headers"
                 :items="items"
                 :items-per-page="5"
@@ -34,8 +33,8 @@
                         value: 'name',
                     },
                     { text: 'Исполнитель', value: 'assignee' },
-                    { text: 'Создано', value: 'created' },
-                    { text: 'Услуга', value: 'process' }
+                    { text: 'Создано', value: 'created' }//,
+                    //{ text: 'Услуга', value: 'process' }
                 ],
                 //debug
                 items: [
@@ -56,18 +55,18 @@
         methods: {
             updateData() {
                 this.isDataLoaded = false;
-                /*axios
+                axios
                     .get('http://10.42.0.1:8000/tasks/?assignee=GusarovAA')
                     .then(response => {
-                        debugger;
                         //console.log(response);
-                        //this.items = response.data;
+                        this.items = response.data;
+                        this.isDataLoaded = true;
                     })
                     .catch(error => {
                         debugger;
                         console.log(error.response);
-                    });*/
-                var xhr = new XMLHttpRequest();
+                    });
+                /*var xhr = new XMLHttpRequest();
                 xhr.onload = function () {
                     console.log(xhr.responseText);
                     debugger;
@@ -77,7 +76,7 @@
                     debugger;
                 };
                 xhr.open("GET", "http://10.42.0.1:8000/tasks/?assignee=GusarovAA", true);
-                xhr.send();
+                xhr.send();*/
             },
 
             clicked(item) {
