@@ -11,9 +11,16 @@ export default new Router({
     {
       //tasks or login
       //alias: ['/forms', '/processes'],
-      path: '/',
+      path: '/tasks',
       name: 'home',
+      //alias: ['/tasks'],
       component: Home
+    },
+    {
+      // task view
+      path: '/tasks/:id',
+      name: 'tasks',
+      component: () => import('./views/TaskView.vue')
     },
     {
       // formList
@@ -21,12 +28,7 @@ export default new Router({
       name: 'forms',
       component: () => import('./views/FormList.vue')
     },
-    {
-      // formList
-      path: '/processes',
-      name: 'processes',
-      component: () => import('./views/ProcessListView.vue')
-    },
+
     {
       // form edit
       path: '/forms/:id',
@@ -35,12 +37,25 @@ export default new Router({
       component: () => import('./views/FormEditView.vue')
     },
     {
+      // processes
+      path: '/processes',
+      name: 'processes',
+      component: () => import('./views/ProcessListView.vue')
+    },
+    {
       // form edit
       path: '/processes/:id',
       alias: ['/processes/new'],
       name: 'processesEdit',
       component: () => import('./views/ProcessEditView.vue')
     },
+    {
+      // form edit
+      path: '/registry',
+      name: 'registry',
+      component: () => import('./views/RegistryView.vue')
+    },
+
     {
       path: '/about',
       name: 'about',

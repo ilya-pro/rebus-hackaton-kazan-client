@@ -44,9 +44,10 @@
         name: "Accordion",
         data: () => ({
             items: [
-                {id: 'home', text: 'Задачи', icon: 'mdi-star', path: '/'},
+                {id: 'home', text: 'Задачи', icon: 'mdi-star', path: '/tasks'},
                 {id: 'forms', text: 'Конструктор форм', icon: 'mdi-wrench', path: '/forms'},
-                {id: 'processes', text: 'Конструктор процессов', icon: 'mdi-shuffle-variant', path: '/processes'}
+                {id: 'processes', text: 'Конструктор процессов', icon: 'mdi-shuffle-variant', path: '/processes'},
+                {id: 'registry', text: 'Реестр', icon: 'fa-list', path: '/registry'}
             ],
             model: 'cForm'
         }),
