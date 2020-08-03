@@ -67,19 +67,17 @@
                     });
             },
             completeClick () {
-                debugger;
                 let id = this.$route.params.id;
                 console.log('compl', id);
                 axios
                     .post('http://10.42.0.1:8000/tasks/'+id+'/complete/')
-                    .then(response => {
+                    .then((/*response*/) => {
                         //console.log(response);
                         //this.items = response.data;
                         this.isDataLoaded = true;
                         this.$router.push('/tasks')
                     })
                     .catch(error => {
-                        debugger;
                         console.log(error.response);
                     });
 

@@ -13,7 +13,7 @@ export default new Router({
       //alias: ['/forms', '/processes'],
       path: '/tasks',
       name: 'home',
-      //alias: ['/tasks'],
+      alias: ['/'],
       component: Home
     },
     {

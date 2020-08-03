@@ -63,7 +63,6 @@
                         this.isDataLoaded = true;
                     })
                     .catch(error => {
-                        debugger;
                         console.log(error.response);
                     });
                 /*var xhr = new XMLHttpRequest();
